@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+.menu {
+    height: 60px;
+    align-content: center;
+    margin-inline: auto;
+}
+li {
+    display: inline;
+    text-align: center;
+    border-bottom:3px solid #E3311D;
+    margin-inline: auto;
+    padding:1% 7.4%;
+    background-color: #f6f5f5;
+    font-size: large;
+    
+}
+li:hover {
+    background-color: #E3311D;
+    color: rgb(255, 255, 255);
+}
+body {
+    width: 75%;
+    margin-inline: auto;
+    background-image: url(Photos/RedLipsGirl.jpg);
+}
+.new {
+    background-color:#E3311D;
+    color:#ffffff;
+    font-size: x-large;
+    margin-top: 5%;
+    width: 92%;
+    display:inline-flex;
+    align-content: center;
+    margin-inline: auto;
+    margin: 4%;
+    max-height: 250px;
+}
+
+.new_button {
+    padding: 2%;
+    text-align: center;
+    font-size: 90%;
+}
+.new_button a {
+    color: #ffffff;
+    font-style:oblique;
+    text-decoration: none;
+    font-size: 150%;
+}
+.new_button h1 {
+    border-bottom:3px solid #ffffff;
+    padding-bottom: 10%;
+    font-size: 194%;
+}
+.new_photo {
+    width: 73%;
+    margin-inline: auto;
+    max-height: 250px
+    ;
+}

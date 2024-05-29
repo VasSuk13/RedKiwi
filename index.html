@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Kiwi</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Favicon/site.webmanifest">
+</head>
+<body>
+    <header class="header">
+        <div class="menu-toggle" id="menu-toggle">&#9776;
+        </div>
+        <a href="/" class="header-logo">
+            <span class="black-text">Red</span>
+            <span class="pink-text">Kiwi</span>
+        </a>
+        <nav class="header-menu">
+            <ul class="header-menu-list" id="header-menu-list">
+                <li class="header-menu-item">
+                    <a href="/" class="header-menu-link">Shop all</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/" class="header-menu-link">Bestsellers</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/" class="header-menu-link">Collection</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/" class="header-menu-link">About us</a>
+                </li>
+                <li class="header-menu-item">
+                    <a href="/" class="header-menu-link">Blog</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-action">
+            <button type="button" class="search-button menu-button"> 
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12.5524" cy="11.0524" r="8.0524" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18.153 17.0713L21.31 20.2201" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            </button>
+            <button type="button" class="account-button menu-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5616 15.2153C7.48305 15.2153 4.00003 15.832 4.00003 18.3016C4.00003 20.7713 7.46095 21.41 11.5616 21.41C15.6402 21.41 19.1222 20.7924 19.1222 18.3237C19.1222 15.8551 15.6623 15.2153 11.5616 15.2153Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5617 11.6928C14.2382 11.6928 16.4075 9.52247 16.4075 6.84593C16.4075 4.16939 14.2382 2.00003 11.5617 2.00003C8.88511 2.00003 6.71475 4.16939 6.71475 6.84593C6.70571 9.51343 8.86101 11.6838 11.5275 11.6928H11.5617Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+            </button>
+            <button type="button" class="cart-button menu-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5137 21.5H8.16592C5.09955 21.5 2.74715 20.3924 3.41534 15.9348L4.19338 9.89357C4.60528 7.66931 6.02404 6.81805 7.26889 6.81805H17.4474C18.7105 6.81805 20.0469 7.73339 20.5229 9.89357L21.3009 15.9348C21.8684 19.889 19.5801 21.5 16.5137 21.5Z" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16.651 6.59839C16.651 4.21232 14.7167 2.27802 12.3307 2.27802V2.27802C11.1817 2.27315 10.0781 2.72618 9.26388 3.53694C8.44969 4.34769 7.99199 5.44938 7.992 6.59839H7.992" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.2963 11.1018H15.2506" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.46569 11.1018H9.41992" stroke="#383838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+            </button>
+        </div>
+        <script src="/script.js"></script>
+    </header>
+    <main class="content">
+        <h1 class="visually-hidden">RedKiwi Studio</h1>
+        
+        <!--Розмітка банеру сайту-->
+        <section class="banner">
+            <h2 class="visually-hidden">Shopping page</h2>
+            <div class="banner-body">
+                
+                <div class="banner-info">
+                    <h3 class="banner-title">Discover your inner beauty with Blossom Glow Kit</h3>
+                    <p class="banner-text">Great gift for yourself and loved ones</p>
+                    <div class="banner-button">
+                        <a href="/" class="banner-link">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--Перший слайдер з товарами-->
+        <section class="swiper-container">
+            <h2 class="swiper-title">New Arrivals</h2>
+            <a class="swiper-link" href="/">See all</a>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                            </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 -7.8281e-07 20 2.06624e-06C8.95431 1.1006e-06 2.7141e-06 8.95431 5.56315e-06 20C4.59751e-06 31.0457 8.95431 40 20 40ZM15.4336 26.2766C14.8555 26.8425 14.8555 27.7598 15.4336 28.3256C16.0116 28.8915 16.9489 28.8915 17.527 28.3256L25.8164 20.212C26.3945 19.6462 26.3945 18.7288 25.8164 18.163L17.527 10.0494C16.9489 9.48355 16.0116 9.48355 15.4336 10.0494C14.8555 10.6152 14.8555 11.5325 15.4336 12.0984L22.6763 19.1875L15.4336 26.2766Z" fill="#B0A6BD"/>
+                    </svg>                    
+            </div>
+            <div class="swiper-button-prev">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.9543 9.65645e-07 -9.65645e-07 8.95431 0 20C9.65645e-07 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 -9.65645e-07 20 0ZM24.5664 13.7234C25.1445 13.1575 25.1445 12.2402 24.5664 11.6744C23.9884 11.1085 23.0511 11.1085 22.473 11.6744L14.1836 19.788C13.6055 20.3538 13.6055 21.2712 14.1836 21.837L22.473 29.9506C23.0511 30.5165 23.9884 30.5165 24.5664 29.9506C25.1445 29.3848 25.1445 28.4675 24.5664 27.9016L17.3237 20.8125L24.5664 13.7234Z" fill="#B0A6BD"/>
+                    </svg>
+            </div>
+        </section>
+
+
+
+
+                    <!--Другий слайдер з товарами-->
+        <section class="swiper-container">
+            <h2 class="swiper-title">Best Sellers</h2>
+            <a class="swiper-link" href="/">See all</a>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img(3).jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slide-container">
+                        <img class="slide-image" src="Photos/img.jpg" alt="Photo of the goods">
+                        <a href="/" class="slide-title">Clarifying Emulsion</a>
+                        <p class="slide-text">with Bija Seed Oil</p>
+                        <p class="slide-price">32$</p>
+                        <button class="like-button" type="button">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.371865 9.0949C-0.701135 5.7449 0.552865 1.9159 4.06987 0.782904C5.91987 0.185904 7.96187 0.537904 9.49987 1.6949C10.9549 0.569904 13.0719 0.189904 14.9199 0.782904C18.4369 1.9159 19.6989 5.7449 18.6269 9.0949C16.9569 14.4049 9.49987 18.4949 9.49987 18.4949C9.49987 18.4949 2.09787 14.4669 0.371865 9.0949Z" fill="#B0A6BD"/>
+                                </svg>
+                        </button>
+                        <button class="slide-button" type="button">Add To Bag</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 -7.8281e-07 20 2.06624e-06C8.95431 1.1006e-06 2.7141e-06 8.95431 5.56315e-06 20C4.59751e-06 31.0457 8.95431 40 20 40ZM15.4336 26.2766C14.8555 26.8425 14.8555 27.7598 15.4336 28.3256C16.0116 28.8915 16.9489 28.8915 17.527 28.3256L25.8164 20.212C26.3945 19.6462 26.3945 18.7288 25.8164 18.163L17.527 10.0494C16.9489 9.48355 16.0116 9.48355 15.4336 10.0494C14.8555 10.6152 14.8555 11.5325 15.4336 12.0984L22.6763 19.1875L15.4336 26.2766Z" fill="#B0A6BD"/>
+                    </svg>                    
+            </div>
+            <div class="swiper-button-prev">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.9543 9.65645e-07 -9.65645e-07 8.95431 0 20C9.65645e-07 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 -9.65645e-07 20 0ZM24.5664 13.7234C25.1445 13.1575 25.1445 12.2402 24.5664 11.6744C23.9884 11.1085 23.0511 11.1085 22.473 11.6744L14.1836 19.788C13.6055 20.3538 13.6055 21.2712 14.1836 21.837L22.473 29.9506C23.0511 30.5165 23.9884 30.5165 24.5664 29.9506C25.1445 29.3848 25.1445 28.4675 24.5664 27.9016L17.3237 20.8125L24.5664 13.7234Z" fill="#B0A6BD"/>
+                    </svg>
+            </div>
+        </section>
+
+
+        <section class="kit-section">
+            <h2 class="visually-hidden">Section with two kits</h2>
+            <div class="kit">
+                <div class="kit-img">
+                    <img src="Photos/IMAGE.jpg" alt="">
+                </div>
+                <div class="kit-content">
+                    <h3 class="kit-title">Blossom Glow Kit</h3>
+                    <p class="kit-text">Reveal your skin's natural glow with our Lotus Glow Kit. Nourishing body and face creams with lotus extract provide deep hydration and rejuvenation. Suitable for all skin types. Vegan, cruelty-free, eco-friendly.</p>
+                    <div class="kit-hashtags">
+                        <p class="kit-hashtag">#GreatGift</p>
+                        <p class="kit-hashtag">#AntiAging</p>
+                        <p class="kit-hashtag">#GreatGift</p>
+                        <p class="kit-hashtag">#Ingredients</p>
+                        <p class="kit-hashtag">#Ingredients</p>
+                    </div>
+                    <div class="kit-buttons">
+                        <a href="" class="shop-button">Shop Now</a>
+                        <div class="explore">
+                            <a href="" class="explore-button">Explore More
+                                <svg width="14" height="12" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 3.5L1 3.5" stroke="#383838" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.63474 0.636753L10.51 3.49966L7.63474 6.36304" stroke="#383838" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="kit-2">
+                <div class="kit-img">
+                    <img src="Photos/IMAGE 2.jpg" alt="">
+                </div>
+                <div class="kit-content-2">
+                    <h3 class="kit-title">Floral Essence Masks Sets</h3>
+                    <p class="kit-text">Indulge in the beauty of nature with our Floral Essence Masks set. Each mask features a unique blend of flower extracts to hydrate and nourish your skin. Experience the essence of flowers in your skincare routine.</p>
+                    <div class="kit-hashtags">
+                        <p class="kit-hashtag">#GreatGift</p>
+                        <p class="kit-hashtag">#AntiAging</p>
+                        <p class="kit-hashtag">#GreatGift</p>
+                        <p class="kit-hashtag">#Ingredients</p>
+                        <p class="kit-hashtag">#Ingredients</p>
+                    </div>
+                    <div class="kit-buttons">
+                        <a href="" class="shop-button">Shop Now</a>
+                        <div class="explore">
+                            <a href="" class="explore-button">Explore More
+                                <svg width="14" height="12" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 3.5L1 3.5" stroke="#383838" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.63474 0.636753L10.51 3.49966L7.63474 6.36304" stroke="#383838" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="blog-swiper">
+            <h2 class="swiper-title">On The Blog</h2>
+            <a class="swiper-link" href="/">See all</a>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="blog-slide-container">
+                        <img class="slide-image" src="Photos/Rectangle 47.jpg" alt="Photo of the goods">
+                        <h3 href="/" class="slide-title">7 Skincare Habits to Break Now</h3>
+                        <p class="slide-text">Great skincare is .</p>
+                        <a class="slide-button blog-button" href="/">Read more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="blog-slide-container">
+                        <img class="slide-image" src="Photos/Rectangle 47.jpg" alt="Photo of the goods">
+                        <h3 href="/" class="slide-title">7 Skincare Habits to Break Now</h3>
+                        <p class="slide-text">Great skincare is a long game—it doesn’t happen overnight, but little steps are made (nightly!) to get and keep your skin at its most radiant state.</p>
+                        <a class="slide-button blog-button" href="/">Read more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="blog-slide-container">
+                        <img class="slide-image" src="Photos/Rectangle 47.jpg" alt="Photo of the goods">
+                        <h3 href="/" class="slide-title">7 Skincare Habits to Break Now</h3>
+                        <p class="slide-text">Great skincare is a long game—it doesn’t happen overnight, but little steps are made (nightly!) to get and keep your skin at its most radiant state.</p>
+                        <a class="slide-button blog-button" href="/">Read more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="blog-slide-container">
+                        <img class="slide-image" src="Photos/Rectangle 47.jpg" alt="Photo of the goods">
+                        <h3 href="/" class="slide-title">7 Skincare Habits to Break Now</h3>
+                        <p class="slide-text">Great skincare is a long game—it doesn’t happen overnight, but little steps are made (nightly!) to get and keep your skin at its most radiant state.</p>
+                        <a class="slide-button blog-button" href="/">Read more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="blog-slide-container">
+                        <img class="slide-image" src="Photos/Rectangle 47.jpg" alt="Photo of the goods">
+                        <h3 href="/" class="slide-title">7 Skincare Habits to Break Now</h3>
+                        <p class="slide-text">Great skincare is a long game—it doesn’t happen overnight, but little steps are made (nightly!) to get and keep your skin at its most radiant state.</p>
+                        <a class="slide-button blog-button" href="/">Read more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="blog-slide-container">
+                        <img class="slide-image" src="Photos/Rectangle 47.jpg" alt="Photo of the goods">
+                        <h3 href="/" class="slide-title">7 Skincare Habits to Break Now</h3>
+                        <p class="slide-text">Great skincare is a long game—it doesn’t happen overnight, but little steps are made (nightly!) to get and keep your skin at its most radiant state.</p>
+                        <a class="slide-button blog-button" href="/">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 -7.8281e-07 20 2.06624e-06C8.95431 1.1006e-06 2.7141e-06 8.95431 5.56315e-06 20C4.59751e-06 31.0457 8.95431 40 20 40ZM15.4336 26.2766C14.8555 26.8425 14.8555 27.7598 15.4336 28.3256C16.0116 28.8915 16.9489 28.8915 17.527 28.3256L25.8164 20.212C26.3945 19.6462 26.3945 18.7288 25.8164 18.163L17.527 10.0494C16.9489 9.48355 16.0116 9.48355 15.4336 10.0494C14.8555 10.6152 14.8555 11.5325 15.4336 12.0984L22.6763 19.1875L15.4336 26.2766Z" fill="#B0A6BD"/>
+                    </svg>                    
+            </div>
+            <div class="swiper-blog-button-prev">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.9543 9.65645e-07 -9.65645e-07 8.95431 0 20C9.65645e-07 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 -9.65645e-07 20 0ZM24.5664 13.7234C25.1445 13.1575 25.1445 12.2402 24.5664 11.6744C23.9884 11.1085 23.0511 11.1085 22.473 11.6744L14.1836 19.788C13.6055 20.3538 13.6055 21.2712 14.1836 21.837L22.473 29.9506C23.0511 30.5165 23.9884 30.5165 24.5664 29.9506C25.1445 29.3848 25.1445 28.4675 24.5664 27.9016L17.3237 20.8125L24.5664 13.7234Z" fill="#B0A6BD"/>
+                    </svg>
+            </div>
+        </section>
+
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="swiper.js"></script>
+    </main>
+    <footer class="footer">
+        <section class="pages">
+            <h2 class="visually-hidden">Information about social networks</h2>
+            <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.1667 15C12.1667 16.8409 13.6591 18.3333 15.5 18.3333C17.3409 18.3333 18.8333 16.8409 18.8333 15C18.8333 13.159 17.3409 11.6666 15.5 11.6666C13.6591 11.6666 12.1667 13.159 12.1667 15Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5408 6.86011C18.4863 6.81199 18.1701 6.80183 15.5 6.80183C12.8299 6.80183 12.5136 6.81199 11.4591 6.86011C10.4841 6.90461 9.95464 7.0675 9.60226 7.20441C9.1355 7.38582 8.80238 7.60253 8.45242 7.95246C8.10249 8.30238 7.88578 8.63554 7.70441 9.10226C7.56746 9.45464 7.40457 9.98413 7.36007 10.9591C7.31195 12.0136 7.30179 12.3299 7.30179 15C7.30179 17.6701 7.31195 17.9863 7.36007 19.0408C7.40457 20.0157 7.56746 20.5452 7.70441 20.8976C7.88578 21.3644 8.10249 21.6975 8.45242 22.0474C8.80238 22.3974 9.1355 22.6141 9.60226 22.7955C9.95464 22.9324 10.4841 23.0953 11.4591 23.1398C12.5135 23.1879 12.8296 23.1981 15.5 23.1981C18.1702 23.1981 18.4865 23.1879 19.5408 23.1398C20.5157 23.0953 21.0452 22.9324 21.3976 22.7955C21.8644 22.6141 22.1975 22.3974 22.5474 22.0474C22.8974 21.6975 23.1141 21.3644 23.2955 20.8976C23.4324 20.5452 23.5953 20.0157 23.6398 19.0408C23.6879 17.9863 23.6981 17.6701 23.6981 15C23.6981 12.3299 23.6879 12.0136 23.6398 10.9591C23.5953 9.98413 23.4324 9.45464 23.2955 9.10226C23.1141 8.63554 22.8974 8.30238 22.5474 7.95246C22.1975 7.60253 21.8644 7.38582 21.3976 7.20441C21.0452 7.0675 20.5157 6.90461 19.5408 6.86011ZM10.3649 15C10.3649 12.1639 12.664 9.86484 15.5 9.86484C18.3361 9.86484 20.6351 12.1639 20.6351 15C20.6351 17.836 18.3361 20.135 15.5 20.135C12.664 20.135 10.3649 17.836 10.3649 15ZM22.0379 9.66194C22.0379 10.3247 21.5007 10.8619 20.8379 10.8619C20.1752 10.8619 19.638 10.3247 19.638 9.66194C19.638 8.99921 20.1752 8.46198 20.8379 8.46198C21.5007 8.46198 22.0379 8.99921 22.0379 9.66194Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5 15C30.5 23.2843 23.7843 30 15.5 30C7.21573 30 0.5 23.2843 0.5 15C0.5 6.71573 7.21573 0 15.5 0C23.7843 0 30.5 6.71573 30.5 15ZM11.377 5.0602C12.4436 5.01152 12.7841 5 15.5 5C18.2158 5 18.5563 5.01152 19.6229 5.0602C20.6873 5.10875 21.4142 5.27777 22.0503 5.525C22.7079 5.78055 23.2656 6.1225 23.8215 6.67843C24.3774 7.23433 24.7194 7.79203 24.9749 8.4496C25.2221 9.08566 25.3912 9.81261 25.4397 10.877C25.4884 11.9436 25.4999 12.2841 25.4999 15C25.4999 17.7158 25.4884 18.0563 25.4397 19.1229C25.3912 20.1873 25.2221 20.9142 24.9749 21.5503C24.7194 22.2079 24.3774 22.7656 23.8215 23.3215C23.2656 23.8774 22.7079 24.2194 22.0503 24.4749C21.4142 24.7221 20.6873 24.8912 19.6229 24.9397C18.5563 24.9884 18.2158 24.9999 15.5 24.9999C12.7841 24.9999 12.4436 24.9884 11.377 24.9397C10.3126 24.8912 9.58566 24.7221 8.94956 24.4749C8.29199 24.2194 7.73429 23.8774 7.1784 23.3215C6.62246 22.7656 6.28051 22.2079 6.02496 21.5503C5.77773 20.9142 5.60871 20.1873 5.56016 19.1229C5.51148 18.0563 5.5 17.7158 5.5 15C5.5 12.2841 5.51148 11.9436 5.56016 10.877C5.60871 9.81261 5.77773 9.08566 6.02496 8.4496C6.28051 7.79203 6.62246 7.23433 7.1784 6.67843C7.73429 6.1225 8.29199 5.78055 8.94956 5.525C9.58566 5.27777 10.3126 5.10875 11.377 5.0602Z" fill="white"/>
+            </svg>
+            <a class="pages-link" href="/">Instagramm link </a>
+        </section>
+        <section class="info">
+            <h2 class="visually-hidden">Information about store</h2>
+            <div class="main-info">
+                <h3 class="info-title"><span class="title-color">Red</span>Kiwi</h3>
+                <p class="info-text">Discover nature's beauty with our natural care products.</p>
+                <div class="email-container">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.935 5.90088L8.97285 8.30957C8.41319 8.75357 7.62577 8.75357 7.06611 8.30957L4.07892 5.90088" stroke="#F5A3B7" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2726 14C13.3001 14.0056 14.6666 12.3397 14.6666 10.2922V5.71334C14.6666 3.66588 13.3001 2 11.2726 2H4.7274C2.69984 2 1.33331 3.66588 1.33331 5.71334V10.2922C1.33331 12.3397 2.69984 14.0056 4.7274 14H11.2726Z" stroke="#F5A3B7" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>     
+                    <a href="mailto:redkiwi@gmail.com" class="info-email">redkiwi@gmail.com</a>
+                </div>
+                <div class="phone-container">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.68785 8.31476C10.3472 10.9734 10.9505 7.89765 12.6438 9.58971C14.2762 11.2217 15.2144 11.5486 13.1462 13.6163C12.8871 13.8245 11.2411 16.3293 5.45642 10.5463C-0.328965 4.7625 2.17441 3.1148 2.38267 2.8558C4.45593 0.782401 4.77726 1.72609 6.40968 3.35806C8.10293 5.05083 5.02846 5.65611 7.68785 8.31476Z" stroke="#F5A3B7" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <a href="tel:+380501234567" class="info-phone">+38 050 123 45 67</a>
+                </div>
+                <div class="position-container">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.66665 7.0005C9.66665 6.07965 8.92049 5.3335 8.00032 5.3335C7.07947 5.3335 6.33331 6.07965 6.33331 7.0005C6.33331 7.92067 7.07947 8.66683 8.00032 8.66683C8.92049 8.66683 9.66665 7.92067 9.66665 7.0005Z" stroke="#F5A3B7" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99967 14C7.20069 14 3 10.5989 3 7.04219C3 4.25776 5.23807 2 7.99967 2C10.7613 2 13 4.25776 13 7.04219C13 10.5989 8.79866 14 7.99967 14Z" stroke="#F5A3B7" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="info-position">Lviv,Ukraine</p>
+                </div>
+            </div>
+            <div class="information">
+                <div class="help">
+                    <h3 class="information-title">help</h3>
+                    <a href="/" class="information-link">Contact us</a>
+                    <a href="/" class="information-link">FAQ</a>
+                    <a href="/" class="information-link">Shipping & Returns</a>
+                </div>
+                <div class="my-account">
+                    <h3 class="information-title">My account</h3>
+                    <a href="/" class="information-link">Addresses</a>
+                    <a href="/" class="information-link">Order Status</a>
+                    <a href="/" class="information-link">Wishlist</a>
+                </div>
+                <div class="customer-care">
+                    <h3 class="information-title">Customer care</h3>
+                    <a href="/" class="information-link">About us</a>
+                    <a href="/" class="information-link">Blog</a>
+                </div>
+            </div>
+            <div class="sign-up">
+                <h3 class="sign-up-title">Sign up for emails</h3>
+                <p class="sign-up-text">Stay informed, subscribe to our newsletter now!</p>
+                <form id="emailForm">
+                    <input class="sign-up-input" type="email" id="email" width="200" height="40">
+                    <span class="error" id="error">Please enter valid email address</span>
+
+                    <div class="sign-up-button-container">
+                        <button class="sign-up-button" type="submit">Subscribe
+                            <svg width="14" height="12" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 3.5L1 3.5" stroke="#383838" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.63474 0.636753L10.51 3.49966L7.63474 6.36304" stroke="#383838" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="privacy-section">
+                <h2 class="visually-hidden">Privacy Policy</h2>
+                <div class="privacy-container-1">
+                    <p>© 2024 RedKiwi Studio</p>
+                </div>
+                <div class="privacy-container-2">
+                    <a class="privacy-link" href="/">Privacy Policy</a>
+                    <a class="privacy-link" href="/">terms and conditions</a>
+                </div>
+        </section>
+    </footer>
+</body>
+</html>

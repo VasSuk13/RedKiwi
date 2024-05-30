@@ -1146,7 +1146,7 @@ font-size: 16px;
   .swiper-button-next:active, .swiper-button-prev:active {
     color:var(--color-gray);
   }
-  .slide-container:active, .blog-slide-container:active {
+  .slide-container:hover, .blog-slide-container:hover {
     .like-button {
       display: grid;
       transition-duration: var(--transition-duration);

@@ -250,8 +250,6 @@
     color: var(--color-black);
     white-space: nowrap;
  }
- 
-
  a,
  button,
  input,
@@ -259,6 +257,11 @@
  svg * {
     transition-duration: var(--transition-duration);
  }
+
+
+
+
+
 
  .header {
     display: flex;
@@ -409,11 +412,11 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 320px;
+  max-width: 320px;
+  width: 100%;
 }
 
 .slide-image{
-  max-width: 100%;
   width: 100%;
   height: auto;
   border-radius: 5px;
@@ -425,8 +428,10 @@
   text-align: left;
   padding: 0 10%;
   overflow: hidden;
+  text-overflow: ellipsis;
   text-decoration: none;
   text-transform: capitalize;
+  min-height: 25px;
 }
 .slide-text {
   margin: 5px 0;
@@ -436,7 +441,12 @@
   padding: 0 10%;
   font-family: var(--font-family-accent);
   overflow: hidden;
+  text-overflow: ellipsis;
   text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
 }
 .slide-price {
   margin: 5px 0;
@@ -475,15 +485,17 @@
   font-size: 14px;
   text-transform: capitalize;
   height: var(--button-height);
+  min-height: var(--button-height);
 }
 .swiper-button-next, .swiper-button-prev {
   color: #757575b5;
   display: block;
   position: absolute;
-  z-index: 10;
+  z-index: 110;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+
 }
 .swiper-button-next {
   right: 5px;
@@ -560,7 +572,6 @@ column-gap: 30px;
   border-radius: 4px;
   text-decoration: none;
 }
-
 .explore {
   display: flex;
   height: var(--button-height);
@@ -569,11 +580,14 @@ column-gap: 30px;
   font-size: 14px;
   font-weight: 500;
 }
-
 .explore-button {
   text-decoration: none;
   padding-inline: 5px;
 }
+
+
+
+
 
 .blog-slide-container {
   box-sizing: border-box;
@@ -584,6 +598,21 @@ column-gap: 30px;
   display: flex;
   flex-direction: column;
   position: relative;
+  max-width: 400px;
+}
+.blog-text {
+  margin: 5px 0;
+  font-size: 14px;
+  color: var(--color-gray);
+  text-align: left;
+  padding: 0 10%;
+  font-family: var(--font-family-accent);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 .blog-button {
   margin-top: auto;
@@ -594,13 +623,15 @@ column-gap: 30px;
   min-height: var(--button-height);
 }
 .swiper-blog-button-next, .swiper-blog-button-prev {
-  color: #fffefe;
+  color:var(--color-light-gray);
+  opacity: 70%;
   display: block;
   position: absolute;
-  z-index: 10;
+  z-index: 110;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+
 }
 .swiper-blog-button-next {
   right: 5px;
@@ -608,6 +639,11 @@ column-gap: 30px;
 .swiper-blog-button-prev {
   left: 5px;
 }
+
+
+
+
+
 
 
 .footer {
@@ -1061,8 +1097,14 @@ font-size: 16px;
   a:hover {
       color: var(--color-gray);
   }
+  .menu-toggle:hover {
+    box-shadow: 0 -5px 10px -5px var(--color-gray), 0 5px 10px -5px var(--color-gray);
+    transform: scale(1.1);
+    transition-duration: var(--transition-duration);
+  }
   .menu-button:hover {
-    background-color: var(--color-gray-white);
+    box-shadow: 0 -5px 10px -5px var(--color-gray), 0 5px 10px -5px var(--color-gray);
+    transform: scale(1.1);
   }
   .banner-link:hover {
     color: var(--color-gray-white);
@@ -1073,8 +1115,13 @@ font-size: 16px;
   }
   .swiper-button-next:hover, .swiper-button-prev:hover {
     color:var(--color-gray);
+    transition-duration: var(--transition-duration);
   }
   .slide-container:hover, .blog-slide-container:hover {
+    transform: scale(0.97);
+    transition-duration: var(--transition-duration);
+    z-index: 100;
+    box-shadow: 0 0 10px var(--color-gray);
     .like-button {
       display: grid;
       transition-duration: var(--transition-duration);
@@ -1105,7 +1152,8 @@ font-size: 16px;
     transition-duration: var(--transition-duration);
   }
   .swiper-blog-button-next:hover, .swiper-blog-button-prev:hover {
-  color: #b8baff;
+  color: var(--color-gray);
+  transition-duration: var(--transition-duration);
   }
   .information-link:hover, .info-email:hover, .info-phone:hover {
     color: var(--color-rose);

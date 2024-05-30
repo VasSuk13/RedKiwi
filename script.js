@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const elements = document.querySelectorAll('.swiper-slide, .first , .second, .third, .kit, .kit-2');
+  const elements = document.querySelectorAll('.first , .second, .third, .kit, .kit-2, .slide-container');
 
   const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -75,3 +75,21 @@ document.addEventListener('DOMContentLoaded', function() {
       observer.observe(element);
   });
 });
+document.addEventListener('DOMContentLoaded', function() {
+  const elements = document.querySelectorAll('.swiper-slide');
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+          } else {
+              entry.target.classList.remove('visible');
+          }
+      });
+  }, { threshold: 0.1 });
+
+  elements.forEach(element => {
+      observer.observe(element);
+  });
+});
+

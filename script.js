@@ -57,4 +57,21 @@ document.addEventListener('DOMContentLoaded', function() {
           console.log('Form submitted successfully with email: ' + emailInput.value);
       }
   });
+
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const elements = document.querySelectorAll('.swiper-slide, .first , .second, .third, .kit, .kit-2');
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+          }
+      });
+  }, { threshold: 0.1 });
+
+  elements.forEach(element => {
+      observer.observe(element);
+  });
 });

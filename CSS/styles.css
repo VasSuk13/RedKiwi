@@ -1105,6 +1105,7 @@ font-size: 16px;
   .menu-button:hover {
     box-shadow: 0 -5px 10px -5px var(--color-gray), 0 5px 10px -5px var(--color-gray);
     transform: scale(1.1);
+    transition-duration: var(--transition-duration);
   }
   .banner-link:hover {
     color: var(--color-gray-white);
@@ -1181,8 +1182,15 @@ font-size: 16px;
   a:active {
       color: var(--color-gray);
   }
+  .menu-toggle:active {
+    box-shadow: 0 -5px 10px -5px var(--color-gray), 0 5px 10px -5px var(--color-gray);
+    transform: scale(1.1);
+    transition-duration: var(--transition-duration);
+  }
   .menu-button:active {
-    background-color: var(--color-gray-white);
+    box-shadow: 0 -5px 10px -5px var(--color-gray), 0 5px 10px -5px var(--color-gray);
+    transform: scale(1.1);
+    transition-duration: var(--transition-duration);
   }
   .banner-link:active {
     color: var(--color-gray-white);
@@ -1195,6 +1203,10 @@ font-size: 16px;
     color:var(--color-gray);
   }
   .slide-container:hover, .blog-slide-container:hover {
+    transform: scale(0.97);
+    transition-duration: var(--transition-duration);
+    z-index: 100;
+    box-shadow: 0 0 10px var(--color-gray);
     .like-button {
       display: grid;
       transition-duration: var(--transition-duration);
@@ -1225,7 +1237,8 @@ font-size: 16px;
     transition-duration: var(--transition-duration);
   }
   .swiper-blog-button-next:active, .swiper-blog-button-prev:active {
-  color: #b8baff;
+    color: var(--color-gray);
+    transition-duration: var(--transition-duration);
   }
   .information-link:active, .info-email:hover, .info-phone:active {
     color: var(--color-rose);

@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const elements = document.querySelectorAll('.first , .second, .third, .kit-2, .slide-container');
+  const elements = document.querySelectorAll('.first , .second, .third, .kit, .kit-2, .slide-container');
 
   const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 document.addEventListener('DOMContentLoaded', function() {
-  const elements = document.querySelectorAll('.swiper-slide, .kit');
+  const elements = document.querySelectorAll('.swiper-slide ');
 
   const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

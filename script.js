@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
       });
   }, { threshold: 0.1 });
-
+observer.unobserve(entry.target);
   elements.forEach(element => {
       observer.observe(element);
   });

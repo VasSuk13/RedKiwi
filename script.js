@@ -31,64 +31,34 @@ document.addEventListener('DOMContentLoaded', function () {
   
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('header-menu-list');
+  document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.banner, .swiper-slide, .first, .second, .third, .kit, .kit-2');
 
-    menuToggle.addEventListener('click', function() {
-        menu.classList.toggle('show');
+    const observerOptions = {
+        root: null, // viewport
+        rootMargin: '0px', // margin around the root
+        threshold: 0.1 // percentage of target's visibility required
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Якщо елемент повинен анімуватися лише один раз, зупиняємо спостереження за ним
+                if (entry.target.classList.contains('animate-once')) {
+                    observer.unobserve(entry.target);
+                }
+            } else {
+                // Якщо елемент не містить класу 'once', зупиняємо анімацію і перезапускаємо її при наступному входженні у видимість
+                if (!entry.target.classList.contains('animate-once')) {
+                    entry.target.classList.remove('visible');
+                    void entry.target.offsetWidth; // Перезапускаємо анімацію
+                }
+            }
+        });
+    }, observerOptions);
+
+    elements.forEach(element => {
+        observer.observe(element);
     });
-
-
-
-    document.getElementById('emailForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Запобігає відправці форми та перекиданню на верх сторінки
-      var emailInput = document.getElementById('email');
-      var error = document.getElementById('error');
-
-      if (!emailInput.value) {
-          error.style.display = 'inline'; // Показує повідомлення про помилку, якщо поле порожнє
-          setTimeout(function() {
-            error.style.display = 'none';
-        }, 2500);
-      } else {
-          error.style.display = 'none';
-          // Тут можна додати код для відправки форми або інших дій
-          console.log('Form submitted successfully with email: ' + emailInput.value);
-      }
-  });
-
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-  const elements = document.querySelectorAll('.first , .second, .third, .slide-container');
-
-  const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-          }
-      });
-  }, { threshold: 0.1 });
-  elements.forEach(element => {
-      observer.observe(element);
-  });
-});
-document.addEventListener('DOMContentLoaded', function() {
-  const elements = document.querySelectorAll('.swiper-slide, .kit, .kit-2, ');
-
-  const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-          } else {
-              entry.target.classList.remove('visible');
-          }
-      });
-  }, { threshold: 0.1 });
-
-  elements.forEach(element => {
-      observer.observe(element);
-  });
-});
-

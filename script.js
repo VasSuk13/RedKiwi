@@ -1,5 +1,11 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var swiper = new Swiper('.swiper-container', {
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('header-menu-list');
+
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('show');
+    });
+    const swiper = new Swiper('.swiper-container', {
       direction: 'horizontal',
       slidesPerView: 4,
       spaceBetween: 10,
@@ -25,40 +31,72 @@ document.addEventListener('DOMContentLoaded', function () {
           slidesPerView: 4,
           spaceBetween: 10,
         }
+      },
+      lazy: true,
+      observer: true,
+      observeParents: true,
+      on: {
+        observerUpdate: function() {
+          observeElements();
+        },
+        slideChange: function() {
+          observeElements();
+        }
       }
     });
-  });
   
-
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const elements = document.querySelectorAll('.banner, .swiper-slide, .first, .second, .third, .kit, .kit-2');
-
-    const observerOptions = {
-        root: null, // viewport
-        rootMargin: '0px', // margin around the root
-        threshold: 0.1 // percentage of target's visibility required
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
+    function observeElements() {
+      const elements = document.querySelectorAll('.banner, .swiper-slide, .first, .second, .third, .kit, .kit-2');
+  
+      const observerOptionsStart = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+      };
+  
+      const observerOptionsEnd = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.05
+      };
+  
+      const observerStart = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Якщо елемент повинен анімуватися лише один раз, зупиняємо спостереження за ним
-                if (entry.target.classList.contains('animate-once')) {
-                    observer.unobserve(entry.target);
-                }
-            } else {
-                // Якщо елемент не містить класу 'once', зупиняємо анімацію і перезапускаємо її при наступному входженні у видимість
-                if (!entry.target.classList.contains('animate-once')) {
-                    entry.target.classList.remove('visible');
-                    void entry.target.offsetWidth; // Перезапускаємо анімацію
-                }
+          if (entry.intersectionRatio > 0.5) {
+            entry.target.classList.add('visible');
+            if (entry.target.classList.contains('animate-once')) {
+              observer.unobserve(entry.target);
             }
+          }
         });
-    }, observerOptions);
-
-    elements.forEach(element => {
-        observer.observe(element);
+      }, observerOptionsStart);
+  
+      const observerEnd = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.intersectionRatio < 0.05) {
+            if (!entry.target.classList.contains('animate-once')) {
+              entry.target.classList.remove('visible');
+              void entry.target.offsetWidth; // Перезапуск анімації
+            }
+          }
+        });
+      }, observerOptionsEnd);
+  
+      elements.forEach(element => {
+        observerStart.observe(element);
+        observerEnd.observe(element);
+      });
+    }
+  
+    observeElements();
+  
+    const observerConfig = { childList: true, subtree: true };
+  
+    const mutationObserver = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        observeElements();
+      });
     });
-});
+  
+    mutationObserver.observe(document.querySelector('.swiper-container'), observerConfig);
+  });

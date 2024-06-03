@@ -223,6 +223,7 @@
     background-color: var(--color-gray-white);
     max-width: 1550px;
     margin: auto;
+    -webkit-tap-highlight-color: transparent;
  }
  .container {
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2) ;

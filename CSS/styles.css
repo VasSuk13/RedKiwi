@@ -223,7 +223,6 @@
     background-color: var(--color-gray-white);
     max-width: 1550px;
     margin: auto;
-    -webkit-tap-highlight-color: transparent;
  }
  .container {
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2) ;
@@ -285,6 +284,16 @@
     display: inline-flex;
     height: 50px;
     align-items: center;
+ }
+ .header-menu-link::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  background: transparent;
+  z-index: -1; /* Щоб псевдоелемент не заважав наведенню */
  }
  .header-action {
     margin-right: 5%;
@@ -1521,8 +1530,8 @@ font-size: 16px;
   .kit.visible {
     opacity: 1;
     transform: translateY(0);
-      -webkit-animation: slide-in-fwd-center 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.7s both;
-              animation: slide-in-fwd-center 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.7s both;
+      -webkit-animation: slide-in-fwd-center 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.7s both !important;
+              animation: slide-in-fwd-center 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.7s both !important;
     }
     
   @-webkit-keyframes slide-in-fwd-center {
@@ -1581,8 +1590,62 @@ font-size: 16px;
   }
 }
 }
+.first.visible, .second.visible, .third.visible {
+	-webkit-animation: tracking-in-expand-fwd 0.8s both !important;
+     -moz-animation: tracking-in-expand-fwd 0.8s both !important;
+	        animation: tracking-in-expand-fwd 0.8s both !important;
+}
+ @-webkit-keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+            transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
 
 
 
+button, a {
+  outline: none; /* Вимикаємо стандартний стиль фокусу */
+}
 
+button:focus, a:focus {
+  outline: none; /* Вимикаємо фокус */
+  box-shadow: none; /* Вимикаємо тінь */
+}
 
+*::selection {
+  background: transparent; /* Вимикаємо підсвітку виділеного тексту */
+}
+
+button, a {
+  -webkit-user-select: none; /* Для Safari */
+  -moz-user-select: none; /* Для Firefox */
+  -ms-user-select: none; /* Для IE */
+  user-select: none; /* Стандартна властивість */
+}

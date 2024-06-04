@@ -224,6 +224,7 @@
     max-width: 1550px;
     margin: auto;
     -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
  }
  .container {
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2) ;

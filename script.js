@@ -101,20 +101,7 @@
     mutationObserver.observe(document.querySelector('.swiper-container'), observerConfig);
   });
 
-  document.addEventListener('DOMContentLoaded', () => {
-    // Перевірка, чи пристрій сенсорний
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
-    const isSmallScreen = window.innerWidth <= 1024;
   
-    // Застосування масштабування для сенсорних пристроїв
-    if (isTouchDevice && isSmallScreen) {
-    
-    }
-    window.addEventListener('load', () => {
-      // Показати сторінку після повного завантаження
-      document.body.style.visibility = 'visible';
-    });
-  });
   
 
   

@@ -102,14 +102,22 @@
   });
 
   document.addEventListener('DOMContentLoaded', () => {
-    if ('ontouchstart' in window || navigator.maxTouchPoints) {
-      if (window.innerWidth <= 1024) {
-        document.body.style.transform = 'scale(0.75)';
-        document.body.style.transformOrigin = 'top left';
-        document.body.style.width = 'calc(100% / 0.75)';
-        document.body.style.height = 'calc(100% / 0.75)';
-      }
+    // Перевірка, чи пристрій сенсорний
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
+    const isSmallScreen = window.innerWidth <= 1024;
+  
+    // Застосування масштабування для сенсорних пристроїв
+    if (isTouchDevice && isSmallScreen) {
+      document.body.style.transform = 'scale(0.8)';
+      document.body.style.transformOrigin = 'top left';
+      document.body.style.width = 'calc(100% / 0.8)';
+      document.body.style.height = 'calc(100% / 0.8)';
     }
-    document.body.style.visibility = 'visible';
+    window.addEventListener('load', () => {
+      // Показати сторінку після повного завантаження
+      document.body.style.visibility = 'visible';
+    });
   });
+  
+
   

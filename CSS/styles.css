@@ -224,7 +224,6 @@
     max-width: 1550px;
     margin: auto;
     -webkit-tap-highlight-color: transparent;
-    overflow: hidden;
  }
  .container {
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2) ;
@@ -1341,6 +1340,10 @@ font-size: 16px;
       color: var(--color-gray-white);
     }
     .body {
+      transform: scale(0.75);
+      transform-origin: top left;
+      width: calc(100% / 0.75);
+      height: calc(100% / 0.75);
       visibility: hidden;
     }
   }
@@ -1635,22 +1638,3 @@ font-size: 16px;
 
 
 
-button, a {
-  outline: none; /* Вимикаємо стандартний стиль фокусу */
-}
-
-button:focus, a:focus {
-  outline: none; /* Вимикаємо фокус */
-  box-shadow: none; /* Вимикаємо тінь */
-}
-
-*::selection {
-  background: transparent; /* Вимикаємо підсвітку виділеного тексту */
-}
-
-button, a {
-  -webkit-user-select: none; /* Для Safari */
-  -moz-user-select: none; /* Для Firefox */
-  -ms-user-select: none; /* Для IE */
-  user-select: none; /* Стандартна властивість */
-}

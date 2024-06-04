@@ -110,5 +110,6 @@
         document.body.style.height = 'calc(100% / 0.75)';
       }
     }
+    document.body.style.visibility = 'visible';
   });
   

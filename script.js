@@ -100,3 +100,15 @@
   
     mutationObserver.observe(document.querySelector('.swiper-container'), observerConfig);
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    if ('ontouchstart' in window || navigator.maxTouchPoints) {
+      if (window.innerWidth <= 1024) {
+        document.body.style.transform = 'scale(0.75)';
+        document.body.style.transformOrigin = 'top left';
+        document.body.style.width = 'calc(100% / 0.75)';
+        document.body.style.height = 'calc(100% / 0.75)';
+      }
+    }
+  });
+  

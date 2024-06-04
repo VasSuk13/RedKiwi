@@ -1340,10 +1340,7 @@ font-size: 16px;
       color: var(--color-gray-white);
     }
     .body {
-      transform: scale(0.75);
-      transform-origin: top left;
-      width: calc(100% / 0.75);
-      height: calc(100% / 0.75);
+      visibility: hidden;
     }
   }
 

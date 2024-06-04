@@ -51,7 +51,7 @@
       const observerOptionsStart = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.5
+        threshold: 0.3
       };
   
       const observerOptionsEnd = {
@@ -62,7 +62,7 @@
   
       const observerStart = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          if (entry.intersectionRatio > 0.5) {
+          if (entry.intersectionRatio > 0.3) {
             entry.target.classList.add('visible');
             if (entry.target.classList.contains('animate-once')) {
               observer.unobserve(entry.target);

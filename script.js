@@ -108,10 +108,7 @@
   
     // Застосування масштабування для сенсорних пристроїв
     if (isTouchDevice && isSmallScreen) {
-      document.body.style.transform = 'scale(0.8)';
-      document.body.style.transformOrigin = 'top left';
-      document.body.style.width = 'calc(100% / 0.8)';
-      document.body.style.height = 'calc(100% / 0.8)';
+    
     }
     window.addEventListener('load', () => {
       // Показати сторінку після повного завантаження

@@ -397,6 +397,7 @@
   font-size: 18px;
   color: var(--color-gray);
   width: 15%;
+  min-width: 80px;
   text-transform: capitalize;
 }
 
@@ -1226,6 +1227,12 @@ font-size: 16px;
 
 
 @media(hover: none) {
+  .body {
+    transform: scale(0.75);
+    transform-origin: top left;
+    width: 133.5%;
+    height: 125%;
+  }
   
   a:active {
       color: var(--color-gray);

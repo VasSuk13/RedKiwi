@@ -397,7 +397,6 @@
   font-size: 18px;
   color: var(--color-gray);
   width: 15%;
-  min-width: 80px;
   text-transform: capitalize;
 }
 
@@ -1227,6 +1226,7 @@ font-size: 16px;
 
 
 @media(hover: none) {
+  
   a:active {
       color: var(--color-gray);
   }
@@ -1631,3 +1631,22 @@ font-size: 16px;
 
 
 
+button, a {
+  outline: none; /* Вимикаємо стандартний стиль фокусу */
+}
+
+button:focus, a:focus {
+  outline: none; /* Вимикаємо фокус */
+  box-shadow: none; /* Вимикаємо тінь */
+}
+
+*::selection {
+  background: transparent; /* Вимикаємо підсвітку виділеного тексту */
+}
+
+button, a {
+  -webkit-user-select: none; /* Для Safari */
+  -moz-user-select: none; /* Для Firefox */
+  -ms-user-select: none; /* Для IE */
+  user-select: none; /* Стандартна властивість */
+}

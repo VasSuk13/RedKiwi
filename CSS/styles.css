@@ -1227,13 +1227,6 @@ font-size: 16px;
 
 
 @media(hover: none) {
-  .body {
-    transform: scale(0.75);
-    transform-origin: top left;
-    width: 133.5%;
-    height: 125%;
-  }
-  
   a:active {
       color: var(--color-gray);
   }
@@ -1345,6 +1338,12 @@ font-size: 16px;
   @media (max-width: 1024px) {
     .header-menu-link:active {
       color: var(--color-gray-white);
+    }
+    .body {
+      transform: scale(0.75);
+      transform-origin: top left;
+      width: calc(100% / 0.75);
+      height: calc(100% / 0.75);
     }
   }
 

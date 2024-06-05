@@ -53,12 +53,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function observeElements() {
-        const elements = document.querySelectorAll('.banner, .swiper-slide, .first, .second, .third, .kit, .kit-2');
+        const elements = document.querySelectorAll('.second, .third, .kit, .kit-2');
         elements.forEach(element => checkVisibility(element));
     }
 
     function handleScroll() {
-        const elements = document.querySelectorAll('.banner, .swiper-slide, .first, .second, .third, .kit, .kit-2');
+        const elements = document.querySelectorAll('.second .third, .kit, .kit-2');
         elements.forEach(element => checkVisibility(element));
     }
 
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const rect = element.getBoundingClientRect();
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
-        if (rect.top <= windowHeight * 0.5 && rect.bottom >= windowHeight * 0.05 && !element.classList.contains('visible')) {
+        if (rect.top <= windowHeight * 0.9 && rect.bottom >= windowHeight * 0.05 && !element.classList.contains('visible')) {
             element.classList.add('visible');
             if (element.classList.contains('animate-once')) {
                 element.classList.remove('animate-once'); // або можете додати клас, щоб зупинити подальші зміни

@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const rect = element.getBoundingClientRect();
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
-        if (rect.top <= windowHeight * 0.9 && rect.bottom >= windowHeight * 0.05 && !element.classList.contains('visible')) {
+        if (rect.top <= windowHeight * 0.1 && rect.bottom >= windowHeight * 0.05 && !element.classList.contains('visible')) {
             element.classList.add('visible');
             if (element.classList.contains('animate-once')) {
                 element.classList.remove('animate-once'); // або можете додати клас, щоб зупинити подальші зміни
